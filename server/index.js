@@ -10,6 +10,8 @@ import bodyParser from 'body-parser';
 
 import mongoose from 'mongoose';
 
+import api from './routes';
+
 const app = express();
 const expressPort = 8080;
 const devPort = 4000;
@@ -23,6 +25,8 @@ const devPort = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+app.use('/api', api);
 
 // 에러가 던져지면 실행됨
 app.use(function(error, req, res, next){

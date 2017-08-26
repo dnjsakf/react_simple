@@ -19,6 +19,7 @@
     "express": "^4.15.4",
     "express-session": "^1.15.5",
     "mongoose": "^4.11.8",
+    "mysql": "^2.14.1",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-addons-update": "^15.6.0",
