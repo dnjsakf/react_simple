@@ -19,7 +19,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
     historyApiFallback: true,
-    contentBase: './dist',
+    contentBase: path.join(__dirname, 'public'),
     proxy: {
       // 최신 버전에서는 "**"을 사용한다.
       // express port와 일치 시켜줘야한다.
@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exculde: /node_modules/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         options:{
           presets:[
@@ -60,8 +60,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'css-loader',
-          'style-loader'
+          'style-loader',
+          'css-loader'
         ]
       }
     ]

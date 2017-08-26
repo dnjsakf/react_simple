@@ -30,7 +30,7 @@ app.use(function(error, req, res, next){
   return res.status(500).send('Something broken!!!');
 });
 // 세션 연결
-app.use(express.session({
+app.use(session({
   secret: "!ad%dfh410",
   resave: false,
   saveUninitialized: true
@@ -48,6 +48,7 @@ app.listen(expressPort, ()=>{
 
 // webpack-dev-server를 실행하면,
 // cross-env process.env.NODE_EVN=development 로 시스템 환경을 바꾸도록 script를 작성하여
+console.log(process.env.NODE_ENV)
 if(process.env.NODE_ENV === 'development'){
   const config = require('../webpack.dev.config');
   const compiler = webpack(config);

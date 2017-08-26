@@ -24,7 +24,7 @@ module.exports = {
         comments: true      // 주석 삭제 안함.
       }
     }),
-    new webpack.LoaderOptionsPlguin({
+    new webpack.LoaderOptionsPlugin({
       minimize: true
     }),
     new webpack.DefinePlugin({
@@ -37,7 +37,7 @@ module.exports = {
     rules:[
       {
         test: /\.js$/,
-        exculde: /node_modules/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         options:{
           presets:[
@@ -49,8 +49,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'css-loader',
-          'style-loader'
+          'style-loader',
+          'css-loader'
         ]
       }
     ]
