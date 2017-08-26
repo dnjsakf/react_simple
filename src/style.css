@@ -1,4 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body{
   width: 100%;
   height: 100%;
+}
+
+header.main-header{
+  width: 100%;
+  height: 50px;
+  background-color: blueviolet;
+}
+section.main-left{
+  z-index:2;
+  position: absolute;
+  width: 300px;
+  height: calc(100% - 50px);
+  background-color: aqua;
+}
+section.main-right{
+  z-index:1;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 50px);
+  padding-left: 300px;
+  background-color: blue;
 }
